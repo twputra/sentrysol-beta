@@ -22,7 +22,7 @@ export default {
         "sentry-teal": "#395B64",
         "sentry-light-teal": "#A5C9CA",
         "sentry-mint": "#E7F6F2",
-        "sentry-sage": "#CFE0E3",
+        "sentry-sage": "#A4C893", // Warna diperbarui agar cocok
         "sentry-blue-gray": "#92BAC1",
         "sentry-accent": "#09B0B6",
         "sentry-footer": "#2C3333",
@@ -77,25 +77,38 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        // Animasi baru ditambahkan di sini
+        "pulse-eye": {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(0.8)",
+            opacity: "0.7",
+            boxShadow: "0 0 15px 7px rgba(164, 200, 147, 0.3), 0 0 25px 15px rgba(164, 200, 147, 0.2)",
           },
-          to: {
-            height: "0",
+          "50%": {
+            transform: "translate(-50%, -50%) scale(1)",
+            opacity: "1",
+            boxShadow: "0 0 25px 15px rgba(164, 200, 147, 0.5), 0 0 40px 25px rgba(164, 200, 147, 0.3)",
           },
+        },
+        "wave": {
+          "0%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+          "100%": { transform: "translateY(0px)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // Animasi baru ditambahkan di sini
+        "pulse-eye": "pulse-eye 3s ease-in-out infinite",
+        "wave": "wave 10s ease-in-out infinite",
       },
     },
   },

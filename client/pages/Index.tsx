@@ -135,52 +135,60 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative z-[2] pt-32 pb-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Secure. Smart. Private. */}
-          <div className="text-white font-poppins text-lg font-normal leading-none mb-8">
-            Secure. Smart. Private.
-          </div>
+<div className="relative w-full h-screen flex flex-col justify-center items-center">
+    {/* Wave background */}
+    <div className="absolute bottom-0 left-0 w-full h-2/3 z-[1]">
+         <img
+            src="https://api.builder.io/api/v1/image/assets/TEMP/c825e8e63e3c0adb94bef5f03f13e3ea4131deac?width=3842"
+            alt="Pola latar belakang garis"
+            className="w-full h-full object-cover animate-wave"
+        />
+    </div>
+    
+    <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
+        <h1 className="text-center mb-8 text-6xl sm:text-8xl lg:text-9xl font-bold leading-none uppercase text-white/80 tracking-widest">
+            SENTRYSOL
+        </h1>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Text content */}
-            <div className="space-y-8">
-              {/* Main Heading */}
-              <h1 className="font-poppins text-4xl sm:text-6xl lg:text-8xl font-bold leading-tight uppercase gradient-text">
-                SENTRYSOL
-              </h1>
-
-              {/* Description and CTA */}
-              <div className="space-y-6">
-                <p className="text-white font-poppins text-lg font-normal leading-relaxed max-w-md">
-                  SentrySol is an AI-native, on-device behavioral security
-                  framework built specifically for Web3 mobile environments,
-                  initially focusing on Solana Mobile Seeker.
-                </p>
-                <button className="bg-sentry-sage text-black font-poppins text-lg font-normal leading-none px-6 py-3 rounded-full hover:bg-sentry-sage/90 transition-colors">
-                  Get Started
-                </button>
-              </div>
+        <div className="grid lg:grid-cols-3 gap-8 items-center h-[400px]">
+            {/* Left Column */}
+            <div className="flex items-center justify-center lg:justify-start h-full">
+                <div className="text-white text-2xl font-normal leading-normal text-center lg:text-left">
+                    Secure. <br /> Smart. <br /> Private.
+                </div>
             </div>
 
-            {/* Right side - Logo */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/63d4f60c2a192a08d444bc9ff2880fed32d0e0c0?width=1519"
-                  alt="SentrySol logo glow"
-                  className="absolute inset-0 w-full h-full object-contain"
-                />
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/cdd82043a412ca71168235cfa284d856822ce355?width=1519"
-                  alt="SentrySol logo"
-                  className="absolute inset-0 w-full h-full object-contain"
-                />
-              </div>
+            {/* Center Column */}
+            <div className="flex justify-center items-center h-full">
+                <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+                    {/* Lingkaran Pendar */}
+                     <div className="absolute inset-0 rounded-full bg-white/10 blur-2xl"></div>
+                    <img
+                        src="https://api.builder.io/api/v1/image/assets/TEMP/cdd82043a412ca71168235cfa284d856822ce355?width=1519"
+                        alt="Logo SentrySol"
+                        className="absolute inset-0 w-full h-full object-contain"
+                    />
+                    {/* Ganti baris di atas dengan yang ini */}
+<div className="absolute top-1/2 left-1/2 w-6 h-6 bg-sentry-sage rounded-full animate-pulse-eye z-10"></div>
+                </div>
             </div>
-          </div>
+
+            {/* Right Column */}
+            <div className="flex flex-col items-center lg:items-end justify-center h-full text-center lg:text-right">
+                <div className="space-y-6">
+                    <p className="text-white font-normal leading-relaxed max-w-md">
+                        SentrySol is an AI-native, on-device behavioral security
+                        framework built specifically for Web3 mobile environments,
+                        initially focusing on Solana Mobile Seeker.
+                    </p>
+                    <button className="bg-sentry-sage text-black font-normal leading-none px-6 py-3 rounded-full hover:bg-opacity-90 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+            </div>
         </div>
-      </section>
+    </div>
+</div>
 
       {/* Section 02 - Intelligent Protection */}
       <section className="relative z-[2] py-20 px-4">
